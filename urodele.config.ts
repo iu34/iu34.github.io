@@ -6,13 +6,13 @@ export const config = {
     logInAuthUrl: "",
   },
   head: {
-    title: "智享出行",
-    brand: "黑驴出品",
+    title: "blog",
+    brand: "智享出行",
     description: "A self-owned full-static blog system",
   },
   footer: {
-    copyright: "© iu34",
-    copyrightUrl: "https://github.com/iu34",
+    copyright: "© 北京智享出行科技发展有限公司",
+    copyrightUrl: "blog.zxcx.qzz.io",
   },
   pagination: {
     size: 10,
