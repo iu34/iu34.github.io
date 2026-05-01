@@ -33,17 +33,17 @@ const { posts, page, pages } = Astro.props;
                   <h1 class="page-title w-[fit-content] text-lg transition-all font-semibold group-hover:underline">
                     {item.title}
                   </h1>
-                  <p class="text-text text-opacity-60 text-sm">{item.intro}</p>
+                    <div class="flex pt-2 gap-2 px-4">
+                      {item.tags.map((tag) => (
+                        <a href={`/tag/${encodeURIComponent(tag)}`} class="text-sm text-gray hover:text-black">
+                          #{tag}
+                        </a>
+                      ))}
+                    </div>
+                  <p class="text-text text-opacity-60 text-sm">{item.createTime}</p>
                 </div>
                 {item.cover && <img class="w-16 h-16 rounded object-cover" src={item.cover.src} alt={item.cover.alt} />}
               </a>
-              <div class="flex pt-2 gap-2 px-4">
-                {item.tags.map((tag) => (
-                  <a href={`/tag/${encodeURIComponent(tag)}`} class="text-sm text-gray hover:text-black">
-                    #{tag}
-                  </a>
-                ))} <text data-acc-time={item.createTime} class="text-end text-xs text-gray" /></text>
-              </div>
             <hr />
           </>
         ))
